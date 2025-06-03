@@ -1,0 +1,256 @@
+#withegg-cake {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#eggless-cake {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#birthday-cakes {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#anniversary-cakes {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#engagement-cakes {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#wedding-cakes {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#graduation-cakes {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#other-event-cakes {
+    background-image: url(Images/banner-4.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.birthday-card {
+    width: 392px;
+    overflow: hidden;
+    margin: 10px;
+    border: solid 2px white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    backdrop-filter: blur(10px) brightness(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: "great vibes", cursive;
+    color: white;
+    font-size: 50px;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.card-img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: height 0.6s ease;
+    z-index: 1;
+}
+
+.card-img-container:hover::after {
+    height: 100%;
+}
+
+.card .d-flex {
+    margin-top: auto;
+}
+
+
+.fa-star {
+    color: rgb(218, 143, 57);
+}
+
+.card {
+    border: solid 2px white;
+    cursor: pointer;
+    display: flex;
+    background-color: transparent;
+    backdrop-filter: blur(10px) brightness(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.card-body {
+    flex-grow: 1;
+    padding: 25px;
+    margin-top: -15px;
+}
+
+
+h3 {
+    color: #82b9d4;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    color: white;
+    border: 1px solid grey;
+    transition: color 0.3s ease;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.product-btn::before,
+.product-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #82b9d4;
+    z-index: -1;
+    transition: width 1s ease;
+    transition-delay: 0s;
+}
+
+.product-btn::before {
+    left: 0;
+}
+
+.product-btn::after {
+    right: 0;
+}
+
+.product-btn:hover::before,
+.product-btn:hover::after {
+    width: 50%;
+}
+
+.product-btn:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* For responsive image to center align */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Zoom btn */
+.zoom-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.image-container:hover .zoom-btn {
+    opacity: 1;
+}
+
+.zoom-btn i {
+    font-size: 18px;
+}
+
+.zoom-btn:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.fa-magnifying-glass-plus {
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    border: none;
+}
+
+.fa-magnifying-glass-plus:hover {
+    color: #82b9d4;
+    border: none;
+    text-decoration: none;
+}

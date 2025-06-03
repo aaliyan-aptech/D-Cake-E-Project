@@ -1,0 +1,122 @@
+.contact-sec {
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  background-image: url(Images/contact-1\ -\ Copy.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+.contact-form {
+  max-width: 150%;
+  background-color: transparent;
+  backdrop-filter: blur(10px) brightness(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex: 290 3 calc(70% - 90px);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.contact-fluid {
+  padding: 10 40px;
+  display: flex;
+  gap: 5px;
+}
+
+.contact-form h3 {
+  color: #82b9d4;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.contact-form p {
+  font-style: italic;
+  color: black;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 550px;
+  height: 55px;
+
+  background-color: #82b9d4;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+
+/* Sliding background effect */
+.contact-form button::before,
+.contact-form button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #A6D1E6;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.contact-form button::before {
+  left: 0;
+  transform: translateX(-100%);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.contact-form button::after {
+  right: 0;
+  transform: translateX(100%);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.contact-form button:hover::before,
+.contact-form button:hover::after {
+  transform: translateX(0);
+}
+
+.contact-form button:hover {
+  color: black;
+}
+
+.contact-form button i {
+  margin-right: 10px;
+}

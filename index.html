@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCake Shop</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+    <!-- Timepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Datepicker JS -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Timepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="testimonial.css">
+
+    <link rel="icon" href="Images/D Cake Shop Logo.png">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+    <!-- Top Strip -->
+    <div class="top-strip">
+        <div class="strip">
+            <div class="strip">
+                <i class="fas fa-phone"></i>&nbsp; +92-300-1234567 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;
+                <i class="fas fa-envelope"></i>&nbsp; info@dcakeshop.com
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- NavBar Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="brand-logo" href="#home">
+                <img loading="eager" decoding="async" src="Images/Dcake Nav logo.png"
+                    alt="D Cake Shop | Delicious Cakes for Everyone" width="130" height="25">
+            </a>
+
+            <!-- Offcanvas menu (hidden on desktop) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">D Cake Shop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="#home">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cakes
+                            </a>
+                            <ul id="dropdown-menu" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#eggless-cake">Eggless Cakes</a></li>
+                                <li><a class="dropdown-item" href="#withegg-cake">With Egg Cakes</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Occasions
+                            </a>
+                            <ul id="dropdown-menu-1" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#birthday-cakes">Birthday Cakes</a></li>
+                                <li><a class="dropdown-item" href="#anniversary-cakes">Anniverary Cakes</a></li>
+                                <li><a class="dropdown-item" href="#engagement-cakes">Engagement Cakes</a></li>
+                                <li><a class="dropdown-item" href="#wedding-cakes">Wedding Cakes</a></li>
+                                <li><a class="dropdown-item" href="#graduation-cakes">Graduation Cakes</a></li>
+                                <li><a class="dropdown-item" href="#other-event-cakes">Other Event Cakes</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#contact-us">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#location">Location</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Order Button aligned to right -->
+            <a href="#order" class="order-btn animate-btn ms-auto me-2">Order</a>
+
+            <!-- Hamburger menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- NavBar End -->
+
+
+
+    <!-- slider -->
+    <div class="container-fluid" id="home">
+        <div class="row">
+            <div class="col">
+                <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                    data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active c-item">
+                            <img src="Images/slider-1-img (2).jpg" class="d-block w-100 img-fluid c-img" alt="slide-1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1 class="text-slide animate-left">Welcome to Cake Heaven!</h1>
+                                <p class="animate-left delay-1">Taste the magic in every bite.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item c-item">
+                            <img src="Images/SpeckledEasterEggCake-Final-dc56b86a-6777-47b4-97d6-291cba4a1451-0-636x418.jpg"
+                                class="d-block w-100 img-fluid c-img" alt="slide-2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1 class="text-slide animate-bottom">Freshly Baked With Love!</h1>
+                                <p class="animate-bottom delay-1">Handcrafted cakes for every occasion.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item c-item">
+                            <!-- <img src="Images/istockphoto-1326149453-612x612.jpg" class="d-block w-100 img-fluid c-img" -->
+                            <img src="Images/slider-1-img.jpg" class="d-block w-100 img-fluid c-img" alt="slide-3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1 class="text-slide animate-zoom">Sweet Moments Await!</h1>
+                                <p class="animate-zoom delay-1">Order now and satisfy your cravings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- slider ends -->
+
+
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <div class="container">
+            <h2>Welcome to D Cake Shop</h2>
+            <div class="welcome-content">
+                <p>Where every bite tells a sweet story! We've been crafting delicious, hand-made cakes and pastries
+                    since 2010, using only the finest ingredients and traditional baking methods.</p>
+                <p>Step into a world where every bite is a celebration and every cake is crafted with love. Whether
+                    you're craving a rich chocolate indulgence, a light and fluffy sponge, or a custom creation for
+                    your special occasion, we've got something sweet for every moment.
+
+                    Our bakers pour passion into every recipe, ensuring each cake is a masterpiece of taste and
+                    texture. Whether you’re here for a quick treat or planning a grand event, we’re ready to make
+                    your moments extra special.
+
+                    So sit back, savor the magic, and let us take you on a journey through the finest flavors. After
+                    all, life’s too short not to enjoy a delicious slice!</p>
+
+                <div class="welcome-features">
+                    <div class="feature">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h3>Custom Cakes</h3>
+                        <p>Personalized designs for all occasions</p>
+                    </div>
+
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>Made with Love</h3>
+                        <p>Every product baked with care</p>
+                    </div>
+
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Fresh Ingredients</h3>
+                        <p>Locally sourced, premium quality</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Welcome ends -->
+
+
+
+    <!-- Product Section -->
+    <product-header>
+        <div class="container-fluid" id="withegg-cake">
+            <div class="container py-5">
+                <h1 class="text-left">With Egg Cakes</h1>
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 py-5">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="images/img1.jpeg" class="card-img-top" alt="Paan Flavoured Cake">
+                                <a href="images/img1.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Paan Flavoured Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="images/img2.jpg" class="card-img-top" alt="White Forest Cake">
+                                <a href="images/img2.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">White Forest Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="images/img3.jpeg" class="card-img-top" alt="Paan Flavoured Cake">
+                                <a href="images/img3.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Chocolate Flavour Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="images/img4.jpeg" class="card-img-top" alt="Paan Flavoured Cake">
+                                <a href="images/img4.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pineapple Paradise Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="images/img5.jpg" class="card-img-top" alt="Paan Flavoured Cake">
+                                <a href="images/img5.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Strawberry Cream Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="images/img6.jpeg" class="card-img-top" alt="Paan Flavoured Cake">
+                                <a href="images/img6.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Red Velvet Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </product-header>
+
+
+    <product-header>
+        <div class="container-fluid" id="eggless-cake">
+            <div class="container py-5">
+
+                <h1 class="text-left">Eggless Cakes</h1>
+
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 py-5">
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="Images/toPeyOOa.jpeg" class="card-img-top" alt="Eggless Pineapple Cake">
+                                <a href="Images/toPeyOOa.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Eggless Chocolate Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="Images/IMG_3351-scaled.jpg" class="card-img-top" alt="Eggless Pineapple Cake">
+                                <a href="Images/IMG_3351-scaled.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Eggless Pineapple Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="Images/red-velvet-cake-3.webp" class="card-img-top"
+                                    alt="Eggless Choco Berry Cake">
+                                <a href="Images/red-velvet-cake-3.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Velvet Eggless Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="Images/Rainbow-Cake_zoom.webp" class="card-img-top"
+                                    alt="Eggless Choco Berry Cake">
+                                <a href="Images/Rainbow-Cake_zoom.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pineapple Paradise Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="Images/Vegan1_95d9ba08-f3d9-47e0-b14a-d2ad63b0df40.webp" class="card-img-top"
+                                    alt="Eggless Choco Berry Cake">
+                                <a href="Images/Vegan1_95d9ba08-f3d9-47e0-b14a-d2ad63b0df40.webp" class="zoom-btn"
+                                    target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Eggless Choco Berry Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="Images/Eggless-Raspberry-Dream-Cake-1000-1.jpg" class="card-img-top"
+                                    alt="Eggless Chocolate Cake">
+                                <a href="Images/Eggless-Raspberry-Dream-Cake-1000-1.jpg" class="zoom-btn"
+                                    target="_blank" title="Zoom">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Eggless Chocolate Cake</h5>
+                                <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around mb-5">
+                                <h3>$100</h3>
+                                <a href="products-detail.html" class="product-btn">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+
+
+    <!--about us starts-->
+    <div class="container-fluid about-head" id="about-us">
+        <section class="ftco-wrap-about" id="about">
+            <div class="intro">
+                <div class="container">
+                    <div class="row flex-column-reverse flex-md-row">
+                        <!-- Left Column - Content -->
+                        <div class="col-md-6">
+                            <div class="intro-content pe-md-4">
+                                <div class="intro-subtitle page-subtitle">About Us</div>
+                                <div class="intro-title">
+                                    <h2>Our Foundation</h2>
+                                </div>
+                                <div class="intro-text">
+                                    <p>DCake Shop was built on a simple yet powerful idea turning passion into
+                                        unforgettable flavors. From a humble beginning in a small kitchen to a beloved
+                                        bakery, our journey is filled with love for baking and a commitment to
+                                        excellence.</p>
+                                </div>
+                            </div>
+
+                            <div class="intro-content pe-md-4">
+                                <div class="intro-title">
+                                    <h2>Our Mission</h2>
+                                </div>
+                                <div class="intro-text">
+                                    <p>At Dcake Shop, our mission is to bring joy and indulgence to every celebration
+                                        through freshly baked, high-quality treats made with love.</p>
+                                </div>
+                            </div>
+
+                            <div class="intro-content pe-md-4">
+                                <div class="intro-title">
+                                    <h2>Our Vision</h2>
+                                </div>
+                                <div class="intro-text">
+                                    <p>At Dcake Shop, we envision a world where every celebration is made sweeter with
+                                        our handcrafted delights. Our goal is to become the go-to bakery for exceptional
+                                        quality, creativity, and unforgettable flavors.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column Images -->
+                        <div class="col-md-6">
+                            <div class="row h-100 g-3">
+                                <!-- Images first on mobile -->
+                                <div class="col-12 d-block d-md-none intro-col">
+                                    <div class="intro-image">
+                                        <img src="Images/wedding-cake-6.webp" alt="about-intro"
+                                            class="img-fluid rounded">
+                                    </div>
+                                </div>
+                                <div class="col-12 d-block d-md-none intro-col mb-3">
+                                    <div class="intro-image">
+                                        <img src="Images/wedding-cake-5.jpg" alt="about-intro"
+                                            class="img-fluid rounded">
+                                    </div>
+                                </div>
+
+                                <!-- Images on desktop -->
+                                <div class="col-md-6 d-none d-md-block intro-col h-50">
+                                    <div id="intro-image h-100" id="about-img-1">
+                                        <img src="Images/wedding-cake-6.webp" alt="about-intro"
+                                            class="img-fluid1 oval-image">
+                                        object-fit-cover">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-none d-md-block intro-col h-50">
+                                    <div id="intro-image h-100">
+                                        <img src="Images/wedding-cake-5.jpg" alt="about-intro"
+                                            class="img-fluid1 oval-image">
+                                        object-fit-cover">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="ftco-section ftco-counter img ftco-no-pt" id="section-counter">
+        <div class="container">
+            <div class="row d-md-flex">
+                <div class="col-md-9">
+                    <div class="row d-md-flex align-item-center">
+                        <div
+                            class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18">
+                                <div class="text">
+                                    <strong class="number" data-number="11">0</strong>
+                                    <span>Year Of Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18">
+                                <div class="text">
+                                    <strong class="number" data-number="100">0</strong>
+                                    <span>Cakes/Variety</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18">
+                                <div class="text">
+                                    <strong class="number" data-number="30">0</strong>
+                                    <span>Staff</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18">
+                                <div class="text">
+                                    <strong class="number" data-number="1500">0</strong>
+                                    <span>Happy Customers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 text-center text-md-left">
+                    <p>The amount of love gained by you people is just pure and we are keep on improving our
+                        services and tastes.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </div>
+    <!--about us ends-->
+
+
+
+    <product-header>
+        <div class="container-fluid" id="birthday-cakes">
+            <div class="container py-5">
+
+                <h1 class="text-left">Birthday Cakes</h1>
+
+                <div class="card-container">
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/cake4.jpg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/cake4.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Nutella Lava Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$143</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/img9.jpeg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/img9.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Berry Blast Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$55</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/img8.jpeg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/img8.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kiwi Fresh Cream Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$80</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+
+    <product-header>
+        <div class="container-fluid" id="anniversary-cakes">
+            <div class="container py-5">
+
+                <h1 class="text-left">Anniversary Cakes</h1>
+
+                <div class="card-container">
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/Anniversary Cake 2.jpg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/Anniversary Cake 2.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cocoa Velvet Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$143</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/Anniversary cake 4.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/Anniversary cake 4.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Devil Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$55</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/Anniversary Cake.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/Anniversary Cake.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">White Velvet Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$80</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+    <product-header>
+        <div class="container-fluid" id="engagement-cakes">
+            <div class="container py-5">
+
+                <h1 class="text-left">Engagement Cakes</h1>
+
+
+                <div class="card-container">
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/engage-cake1.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/engage-cake1.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Gumpaste Fondant Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$143</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/engagedcake-3.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/engagedcake-3.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Buttercream Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$55</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/engagement-cake-3.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/engagement-cake-3.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ferrero Rocher Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$80</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+    <product-header>
+        <div class="container-fluid" id="wedding-cakes">
+            <div class="container py-5">
+
+                <h1 class="text-left">Wedding Cakes</h1>
+
+                <div class="card-container">
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/weddingcake.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/weddingcake.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Bundt Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$143</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/wedding-cake.avif" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/wedding-cake.avif" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Frost & Fantasy Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$55</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/weddingCake.jpg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/weddingCake.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sugar Swirl Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$80</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+    <product-header>
+        <div class="container-fluid" id="graduation-cakes">
+            <div class="container py-5">
+
+                <h1 class="text-left">Graduation Cakes</h1>
+
+                <div class="card-container">
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/doctorcake.webp" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/doctorcake.webp" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">The White Coat Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$143</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/graduation-cake-2.jpeg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/graduation-cake-2.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Data Layered Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$55</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/graduation-cake-1.jpg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/graduation-cake-1.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Graduate’s Glory Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$80</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+    <product-header>
+        <div class="container-fluid" id="other-event-cakes">
+            <div class="container py-5">
+
+                <h1 class="text-left">Other Event Cakes</h1>
+
+                <div class="card-container">
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/babyshower-cake.jpg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/babyshower-cake.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Baby Shower Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$143</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/bride-to-be-cake.jpg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/bride-to-be-cake.jpg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Shower Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$55</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="birthday-card h-100">
+                        <div class="image-container">
+                            <img src="Images/Image 18.jpeg" class="card-img-top" alt="Eggless Chocolate Cake">
+                            <a href="Images/Image 18.jpeg" class="zoom-btn" target="_blank" title="Zoom">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Independence Day Cake</h5>
+                            <p class="card-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                                    class="fa-solid fa-star"></i>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-around mb-5">
+                            <h3>$80</h3>
+                            <a href="products-detail.html" class="product-btn">Add to cart</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </product-header>
+
+
+
+    <!-- Contact Us -->
+    <div class="contact-sec" id="contact-us">
+        <div class="container contact-fluid">
+            <div class="col-lg-6 col-md-12">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <p>Have a question or special request? Fill out the form below and we'll get back to you within
+                            24 hours.</p>
+                        <input type="text" placeholder="Full Name" required />
+                        <input type="email" placeholder="Email Address" required />
+                        <input type="tel" placeholder="Phone Number" />
+                        <input type="text" placeholder="Subject" />
+                        <textarea placeholder="Type your Message..." required></textarea>
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100" id="thankYouModalLabel">Message Sent</h5>
+                </div>
+                <div class="modal-body">
+                    Thank you! Your message has been successfully sent.<br>
+                    We'll get back to you within 24 hours.
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us end -->
+
+
+
+    <!-- Gallery section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="gallery-title">
+                <h2>Delicious Cake Gallery</h2>
+                <p>Explore our mouth-watering cake collections</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/gallery-11.jpg" alt="Chocolate Cake">
+                    <div class="overlay">
+                        <h5>Red Velvet Cake</h5>
+                        <p>Classic red velvet with smooth cream</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-19.jpg" alt="Strawberry Cake">
+                    <div class="overlay">
+                        <h5>Strawberry Cream Cake</h5>
+                        <p>Fresh strawberries with soft sponge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-13.webp" alt="Vanilla Cake">
+                    <div class="overlay">
+                        <h5>Choco Bliss Cake</h5>
+                        <p>Simple and elegant vanilla treat</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-16.webp" alt="Red Velvet Cake">
+                    <div class="overlay">
+                        <h5>Blueberry Cream Cake</h5>
+                        <p>Fresh strawberries with soft sponge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-14.jpg" alt="Chocolate Cake">
+                    <div class="overlay">
+                        <h5>Chocolate Delight Cake</h5>
+                        <p>Rich and creamy chocolate flavor</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-15.jpg" alt="Strawberry Cake">
+                    <div class="overlay">
+                        <h5>Strawberry Cream</h5>
+                        <p>Fresh strawberries with soft sponge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-17.webp" alt="Vanilla Cake">
+                    <div class="overlay">
+                        <h5>Vanilla Bliss</h5>
+                        <p>Simple and elegant vanilla treat</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/gallery-18.jpg" alt="Red Velvet Cake">
+                    <div class="overlay">
+                        <h5>Raspberry Cream Cake</h5>
+                        <p>Classic Raspberry cake with smooth cream</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Gallery section ends -->
+
+
+
+    <!-- testimonials -->
+    <header>
+        <div class="testimonial-container" id="testimonial">
+            <div class="testimonial-container-left">
+                <h1 class="testimonial-head">What our happy customers say about our cakes</h1>
+                <p class="testimonial-para-1">Over 100 satisfied customers have made our cakes part of their
+                    celebrations, from Birthdays to
+                    Weddings!</p>
+                <p class="testimonial-para-2">We bake love, and our customers feel it in every bite.</p>
+                <a href="testimonials.html" class="animated-btn">See more sweet stories</a>
+            </div>
+            <div class="testimonial-container-right">
+                <div id="testimonial-card-1" class="testimonial-card">
+                    <img class="user" src="images/circle-profile-pic.jpg" alt="user">
+                    <div class="testimonial-card-content">
+                        <span><i class="fa-solid fa-quote-left"></i></span>
+                        <div class="testimonial-card-details">
+                            <p>
+                                I ordered a custom chocolate cake for my daughter’s birthday, and it was beyond
+                                perfect!
+                                So moist and beautifully decorated.
+                            </p>
+                            <h4>Ayesha Muneeb</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="testimonial-card-2" class="testimonial-card">
+                    <img class="user" src="images/497-4973038_profile-picture-circle-png-transparent-png.png"
+                        alt="user">
+                    <div class="testimonial-card-content">
+                        <span><i class="fa-solid fa-quote-left"></i></span>
+                        <div class="testimonial-card-details">
+                            <p>
+                                Hands down the best red velvet cake in Karachi! Super fresh and just melts in your
+                                mouth.
+                            </p>
+                            <h4>Rizwan Ahmed</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="testimonial-card-3" class="testimonial-card">
+                    <img class="user" src="images/pro5.png" alt="user">
+                    <div class="testimonial-card-content">
+                        <span><i class="fa-solid fa-quote-left"></i></span>
+                        <div class="testimonial-card-details">
+                            <p>
+                                Our wedding cake was a dream come true — elegant, delicious, and right on time.
+                                Thank
+                                you so much!
+                            </p>
+                            <h4>Hamza Khan</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="testimonial-card-4" class="testimonial-card">
+                    <img class="user" src="images/253-2532351_rachel-rouhana-profile-picture-circle-hd-png-download.png"
+                        alt="user">
+                    <div class="testimonial-card-content">
+                        <span><i class="fa-solid fa-quote-left"></i></span>
+                        <div class="testimonial-card-details">
+                            <p>
+                                Hands down the best red velvet cake in Karachi! Super fresh and just melts in your
+                                mouth.
+                            </p>
+                            <h4>Syeda Zunaira</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- testimonials end -->
+
+
+
+    <!-- Order Cake starts -->
+    <div class="order-head">
+        <div class="container">
+        <div class="order-container" id="order">
+                <div class="col-lg-6 col-md-12">
+                            <h2>Order Your Cake</h2>
+                        </div>
+
+                        <form id="cakeOrderForm" class="order-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Delivery Address</label>
+                                <input id="address" rows="3" placeholder="Enter delivery address" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="deliveryDate">Delivery Date</label>
+                                    <input type="date" id="deliveryDate" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="deliveryTime">Delivery Time</label>
+                                    <input type="time" id="deliveryTime" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cakeFlavor">Cake Flavor</label>
+                                    <select id="cakeFlavor" required>
+                                        <option value="">Select a flavor</option>
+                                        <option value="Paan Flavoured Cake">Paan Flavoured Cake</option>
+                                        <option value="White Forest Cake">White Forest Cake</option>
+                                        <option value="Chocolate Truffle Cake">Chocolate Truffle Cake</option>
+                                        <option value="Pineapple Paradise Cake">Pineapple Paradise Cake</option>
+                                        <option value="Strawberry Cream Cake">Strawberry Cream Cake</option>
+                                        <option value="Red Velvet Cake">Red Velvet Cake</option>
+                                        <option value="Nutella Lava Cake">Nutella Lava Cake</option>
+                                        <option value="Berry Blast Cake">Berry Blast Cake</option>
+                                        <option value="Kiwi Fresh Cream Cake">Kiwi Fresh Cream Cake</option>
+                                        <option value="Eggless Chocolate Cake">Eggless Chocolate Cake</option>
+                                        <option value="Eggless Pineapple Cake">Eggless Pineapple Cake</option>
+                                        <option value="Velvet Eggless Cake">Velvet Eggless Cake</option>
+                                        <option value="Pineapple Paradise Cake">Pineapple Paradise Cake</option>
+                                        <option value="Eggless Berry Dream Cake">Eggless Berry Dream Cake</option>
+                                        <option value="Strawberry Cream Cake">Strawberry Cream Cake</option>
+                                        <option value="Cocoa Velvet Cake">Cocoa Velvet Cake</option>
+                                        <option value="Devil Cake">Devil Cake</option>
+                                        <option value="White Velvet Cake">White Velvet Cake</option>
+                                        <option value="Gumpaste Fondant Cake">Gumpaste Fondant Cake</option>
+                                        <option value="Buttercream Cake">Buttercream Cake</option>
+                                        <option value="Ferrero Rocher Cake">Ferrero Rocher Cake</option>
+                                        <option value="Chocolate Bundt Cake">Chocolate Bundt Cake</option>
+                                        <option value="Frost & Fantasy Cake">Frost & Fantasy Cake</option>
+                                        <option value="Sugar Swirl Cake">Sugar Swirl Cake</option>
+                                        <option value="The White Coat Cake">The White Coat Cake</option>
+                                        <option value="Data Layered Cake">Data Layered Cake</option>
+                                        <option value="Graduate's Glory Cake">Graduate's Glory Cake</option>
+                                        <option value="Baby Shower Cake">Baby Shower Cake</option>
+                                        <option value="Bridal Shower Cake">Bridal Shower Cake</option>
+                                        <option value="Independence Day Cake">Independence Day Cake</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cakeSize">Cake Size (kg)</label>
+                                    <select id="cakeSize" required>
+                                        <option value="">Select size</option>
+                                        <option value="0.5">0.5 kg</option>
+                                        <option value="1">1 kg</option>
+                                        <option value="1.5">1.5 kg</option>
+                                        <option value="2">2 kg</option>
+                                        <option value="3">3 kg</option>
+                                        <option value="3">3.5 kg</option>
+                                        <option value="3">4 kg</option>
+                                        <option value="3">4.5 kg</option>
+                                        <option value="3">5 kg</option>
+                                        <option value="3">5.5 kg</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Place Order</button>
+                        </form>
+
+                        <div id="orderConfirmation" class="confirmation-message" style="display: none;">
+                            <h3>Thank you for your order!</h3>
+                            <p>We've received your cake order and will contact you shortly.</p>
+                            <div id="orderSummary"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Order Cake ends -->
+
+
+
+    <!-- Map Location Starts -->
+    <div class="container-fluid" id="location">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Left Column: Google Map -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <div class="map-responsive">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0190229603613!2d-122.4194156846814!3d37.774929779758074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d4a7b0a5%3A0x4c5e0a3db5b5a2f0!2sDCake%20Shop!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Right Column: Contact Info -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>We'd love to hear from you! Whether you have questions about our products, want to
+                            place a
+                            special order, or just want to say hello, our team is here to help.
+                            We’d <br> love to hear from you! Contact us for any queries, collaborations, or
+                            feedback.
+                            <br> Your ideas, questions, and feedback matter to us. Let’s talk!
+                        </p>
+                        <div class="info">
+                            <div><strong>Opening Hours:</strong>
+                                <br>Monday-Friday: 7am - 7pm
+                                <br>Saturday: 8am - 5pm
+                                <br>Sunday: 9am - 3pm
+                            </div>
+                        </div>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Map Location ends -->
+
+
+
+    <!-- Footer Starts -->
+    <div class="container-fluid">
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column contact-column">
+                    <img src="Images/D Cake Shop Logo-1.png" alt="D Cake Shop Logo" class="footer-logo">
+                </div>
+                <div class="footer-column">
+                    <h4>Cakes</h4>
+                    <ul>
+                        <li><a href="#birthday-cakes">Birthday Cakes</a></li>
+                        <li><a href="#anniversary-cakes">Anniversary Cakes</a></li>
+                        <li><a href="#engagement-cakes">Engagements Cakes</a></li>
+                        <li><a href="#wedding-cakes">Wedding Cakes</a></li>
+                        <li><a href="#graduation-cakes">Graduation Cakes</a></li>
+                        <li><a href="#other-event-cakes">Other Event Cakes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>Flat 20, Reynolds Neck, North</li>
+                        <li>Helenaville, FV77 8WS</li>
+                        <li>hallo@example.com</li>
+                        <li>+2(305) 587-3407</li>
+                        <div class="footer-icons">
+                            <a href="https://www.facebook.com/" target="_self">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_self">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_self">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.pinterest.com/" target="_self">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column newsletter-column">
+                    <h4>Newsletter Signup</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>Copyright © 2025 D Cakes all right reserved.</p>
+                </div>
+        </footer>
+    </div>
+    <!-- Footer ends -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- preloader -->
+    <script>
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            preloader.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>

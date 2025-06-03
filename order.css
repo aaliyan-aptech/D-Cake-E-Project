@@ -1,0 +1,175 @@
+
+.order-head {
+  background-image: url(Images/contact-1.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 0px;
+
+}
+
+.order-container {
+  max-width: 75%;
+  text-align: left;
+  border-radius: 15px;
+  background-color: transparent;
+  backdrop-filter: blur(10px) brightness(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 50px;
+}
+
+#order {
+  background-color: transparent;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.order-container h2 {
+  font-family: "great vibes", cursive;
+  color: #82b9d4;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 400;
+  color: black;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 5px 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #A6D1E6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(210, 60, 119, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.submit-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #82b9d4;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.submit-btn::before,
+.submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #A6D1E6;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.submit-btn::before {
+  left: 0;
+  transform: translateX(-100%);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.submit-btn::after {
+  right: 0;
+  transform: translateX(100%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.submit-btn:hover::before,
+.submit-btn:hover::after {
+  transform: translateX(0);
+}
+
+.submit-btn:hover {
+  color: black;
+}
+
+.confirmation-message {
+  text-align: center;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.confirmation-message h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.confirmation-message p {
+  color: black;
+  font-size: 20px;
+}
+
+/* Date and time inputs specific styling */
+input[type="date"],
+input[type="time"] {
+  min-height: 40px;
+}
+
+/* Confirmation message styling */
+.confirmation-message {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.confirmation-message h3 {
+  color: #82b9d4;
+  margin-bottom: 10px;
+}
+
